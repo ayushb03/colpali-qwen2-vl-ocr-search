@@ -2,6 +2,8 @@
 
 Welcome to the **OCR + Document Search App**, a powerful tool for extracting and searching text from images! This app leverages advanced machine learning models to identify and process English and Hindi text, providing a seamless user experience for document analysis.
 
+## 🔎 Research Paper
+[ColPali: Efficient Document Retrieval with Vision Language Models](https://arxiv.org/abs/2407.01449)
 ## 🌐 Deployment
 
 The OCR + Document Search App is deployed on [Hugging Face Spaces](https://huggingface.co/spaces/ayushb03/colpali-qwen2-ocr-search). You can access it online to test its functionality without any setup on your local machine!
