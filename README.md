@@ -1,4 +1,4 @@
-# 🖼️ OCR + Document Search: ColPali Architecture + Qwen2-VL model
+# 🖼️ OCR + Document Search: ColPali Architecture + Qwen2-VL 
 
 Welcome to the **OCR + Document Search App**, a powerful tool for extracting and searching text from images! This app leverages advanced machine learning models to identify and process English and Hindi text, providing a seamless user experience for document analysis.
 
