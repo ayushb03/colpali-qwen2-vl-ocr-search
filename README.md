@@ -1,13 +1,21 @@
-# 🖼️ OCR + Document Search App
+# 🖼️ OCR + Document Search: ColPali Architecture + Qwen2-VL model
 
 Welcome to the **OCR + Document Search App**, a powerful tool for extracting and searching text from images! This app leverages advanced machine learning models to identify and process English and Hindi text, providing a seamless user experience for document analysis.
+
+## 🌐 Deployment
+
+The OCR + Document Search App is deployed on [Hugging Face Spaces](https://huggingface.co/spaces). You can access it online to test its functionality without any setup on your local machine!
+
+## ⚠️ Caution
+
+Please use **super small files** to test the application. The models can take a long time to load, build the index, and then query, which may lead to delays with larger files, also try using the deployed app only as running these models locally is not fesible due to low compute resources.
 
 ## 📋 Features
 
 - **Image Upload**: Easily upload images in JPG, JPEG, or PNG formats.
-- **Indexing**: Build an index from uploaded images for quick searches.
-- **Keyword Search**: Search for specific keywords within extracted text.
-- **Highlighting**: Matched keywords in the output are highlighted for better visibility.
+- **Indexing**: Build an index using the ColPali model using Byaldi library to retrieve the most relevant pages to answer the text query.
+- **Keyword Search**: Search for specific keywords within extracted text using the Qwen2-VL-2B-Instruct VLM for querying.
+- **Highlighting**: Matched keywords in the output are highlighted for better UX.
 - **User-friendly Interface**: Built with Streamlit for an intuitive user experience.
 
 ## 🚀 How It Works
@@ -16,8 +24,8 @@ Welcome to the **OCR + Document Search App**, a powerful tool for extracting and
    - Users can upload their image files through the web interface. The app supports JPG, JPEG, and PNG formats.
 
 2. **Build Index**:
-   - After uploading an image, users can click the **Build Index** button. This process extracts relevant information and builds an index for quick retrieval.
-   - The application utilizes a **RAGMultiModalModel** to index the image, ensuring efficient search capabilities.
+   - After uploading an image, users can click the **Build Index** button. This process extracts relevant information and builds an index with the ColPali architecture for quick retrieval.
+   - The application utilizes a **RAGMultiModalModel** to index the image (in the byaldi library), ensuring efficient search capabilities.
 
 3. **Keyword Input**:
    - Users can input a keyword into a designated text box to search for specific terms in the extracted text.
@@ -42,5 +50,14 @@ To run this app locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/ayushb03/colpali-qwen2-vl-ocr.git 
+   
+3. **Create & Activate Environment**
+   ```bash
+   python -m venv .venv && source .venv/bin/activate 
+   
+4. **Install Dependencies && Run the app**
+  ```bash
+   pip install -r requirements.txt && streamlit run app.py
+
+  
