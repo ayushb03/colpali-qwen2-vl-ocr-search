@@ -238,3 +238,14 @@ if st.button("Process"):
 # Footer section
 st.markdown("---")
 st.write("Made with ❤️ by AYUSH BODADE")
+
+# Links section
+st.markdown(
+    """
+    ### Connect with me:
+    - [GitHub](https://github.com/ayushb03)
+    - [LinkedIn](https://www.linkedin.com/in/ayushbodade)
+    - [Email](mailto:ayushbodade1@gmail.com)
+    - [Twitter](https://twitter.com/ayushb03)
+    """
+)
